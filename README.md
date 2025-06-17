@@ -53,9 +53,6 @@
 - 干掉了一部分的自动化工具检测，但是仍然不建议使用selenium，由于chromedriver依赖Function.prototype.apply致命的特征。
 
 
-- playwright过不了cloudflare的cdp检测，如果一定要使用建议用补丁完的[patchright](https://github.com/Kaliiiiiiiiii-Vinyzu/patchright)，它完全禁用了runtime.enable。
-
-
 - 建议使用[DrissionPage](https://github.com/g1879/DrissionPage),特征比较少。
 
 
