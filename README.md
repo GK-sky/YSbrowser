@@ -50,8 +50,8 @@
 
 
 ## 自动化工具的建议
-- 干掉了一部分的自动化工具检测，但是仍然不建议使用selenium，由于chromedriver依赖Function.prototype.apply致命的特征。
-
+- 干掉了cdp检测，selenium，playwright，DrissionPage等自动化工具部分特征。
+- 
 
 - 建议使用[DrissionPage](https://github.com/g1879/DrissionPage),特征比较少。
 
@@ -64,8 +64,9 @@
 
 - 过掉了console检查
 
-## 支持的PC
+
+## 待续
 - 由于目前手上只有2019款mac book pro,暂时只有mac_intel版本，后续会新增window和linux
-
-
 - 由于没有苹果开发者账号，所以没有签名，隐私与安全性里面的安全性下仍要打开才能运行。
+- 增加伪造gpu指纹
+- 增加更多chrome版本tls指纹
