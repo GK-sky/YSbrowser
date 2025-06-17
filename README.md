@@ -51,7 +51,7 @@
 
 ## 自动化工具的建议
 - 干掉了cdp检测，selenium，playwright，DrissionPage等自动化工具部分特征。
-- 
+
 
 - 建议使用[DrissionPage](https://github.com/g1879/DrissionPage),特征比较少。
 
