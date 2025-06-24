@@ -66,7 +66,7 @@
 
 
 ## 待续
-- 由于目前手上只有2019款mac book pro,暂时只有mac_intel版本，后续会新增window和linux
+- 由于目前手上只有2019款mac book pro,暂时只有mac版本，后续会新增window和linux
 - 由于没有苹果开发者账号，所以没有签名，隐私与安全性里面的安全性下仍要打开才能运行。
 - 增加伪造gpu指纹
 - 增加更多chrome版本tls指纹
