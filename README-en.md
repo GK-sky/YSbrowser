@@ -23,15 +23,16 @@
 ---
 
 ## ⚙️ Core Parameters
-| Parameter                            | Default Value       | Description                     |
-|--------------------------------------|---------------------|---------------------------------|
-| `--timezone`                         | `Asia/Tokyo`        | Set browser timezone            |
-| `--fpseed`                           | `12lfisffwfaTYa`    | Fingerprint generation seed     |
-| `--chrome-version`                   | `130.0.7151.70`     | Chrome browser version          |
-| `--noimage`                          | -                   | Disable image loading           |
-| `--nocrash`                          | -                   | Fix automation tool crashes     |
-| `--lang`                             | `zh-CN`             | Set browser language            |
-| `--accept-lang`                      | `zh-CN`             | Set HTTP request language       |
+| Parameter          | Default Value    | Description                 |
+|--------------------|------------------|-----------------------------|
+| `--timezone`       | `Asia/Tokyo`     | Set browser timezone        |
+| `--fpseed`         | `12lfisffwfaTYa` | Fingerprint generation seed |
+| `--chrome-version` | `130.0.7151.70`  | Chrome browser version      |
+| `--noimage`        | -                | Disable image loading       |
+| `--nocrash`        | -                | Fix automation tool crashes |
+| `--lang`           | `zh-CN`          | Set browser language        |
+| `--accept-lang`    | `zh-CN`          | Set HTTP request language   |
+| `--proxy-server`   | `-`              | Set proxy server            |
 
 ---
 
@@ -67,6 +68,16 @@
 - **Function**: Control browser language and HTTP headers
 - **Impact**: Speech recognition and localization-related fingerprints
 - **Recommendation**: Keep both values consistent
+
+### **`proxy-server`**  
+- **Function**: Configure network proxy server
+- **Format**: `--proxy-server=[protocol]://[address]:[port]`
+- **Supported Protocols**:
+  - `http`: HTTP/HTTPS proxy
+  - `socks4`: SOCKS4 proxy
+  - `socks5`: SOCKS5 proxy (authentication not supported)
+- **Examples**:
+  - `--proxy-server=http://127.0.0.1:8080`
 
 ---
 
