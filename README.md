@@ -1,74 +1,107 @@
 <div align="center">
 
 # ✨ 𝕐𝕊𝕓𝕣𝕠𝕨𝕤𝕖𝕣 ✨  
+**下一代隐私浏览器解决方案**
 
 </div>
 
-## 参数
+[English](README-en.md) | [中文](README.md)
 
-| 参数名                              | 描述                         |
-|----------------------------------|----------------------------|
-| `--timezone=Asia/Tokyo`          | 时区                         |
-| `--fpseed=12lfisffwfaTYa`        | 指纹种子数                      |
-| `--chrome-version=130.0.7151.70` | 版本号                        |
-| `--noimage`                      | 不加载图片                      |
-| `--nocrash`                      | 解决playwright,puppeteer崩溃bug |
-| `--lang=zh-CN`                   | 本地语言                       |
-| `--accept-lang=zh-CN`            | 请求语言                       |
+## 🔍 检测通过列表
+| 检测平台                                                             | 状态         | 备注               |
+|---------------------------------------------------------------------|--------------|--------------------|
+| [browserscan](https://browserscan.net)                              | ✅ 完美通过     | -                  |
+| [creepjs](https://abrahamjuliot.github.io/creepjs/)                 | ✅ 62.5%+     | 持续优化中         |
+| [iphey](https://iphey.com)                                          | ✅ 完美通过     | -                  |
+| [pixelscan](https://pixelscan.net)                                  | ✅ 完美通过     | -                  |
+| [cloudflare](https://www.cloudflare.com/zh-cn/)                     | ✅ 完美通过     | 需启用图片加载     |
+| [datadome](https://datadome.co/products/bot-protection/)            | ✅ 完美通过     | -                  |
+| [brotector](https://kaliiiiiiiiii.github.io/brotector/)             | ✅ 完美通过     | -                  |
+| [sannysoft](https://bot.sannysoft.com/)                             | ✅ 完美通过     | -                  |
+| [fingerprint](https://fingerprint.com/products/bot-detection/)      | ✅ 完美通过     | -                  |
+
 ---
 
+## ⚙️ 核心参数配置
+| 参数名                                | 默认值               | 功能描述                         |
+|---------------------------------------|----------------------|----------------------------------|
+| `--timezone`                          | `Asia/Tokyo`         | 设置浏览器时区                   |
+| `--fpseed`                            | `12lfisffwfaTYa`     | 指纹生成种子                     |
+| `--chrome-version`                    | `130.0.7151.70`      | Chrome 浏览器版本                |
+| `--noimage`                           | -                    | 禁用图片加载                     |
+| `--nocrash`                           | -                    | 修复自动化工具崩溃问题           |
+| `--lang`                              | `zh-CN`              | 设置浏览器语言                   |
+| `--accept-lang`                       | `zh-CN`              | 设置 HTTP 请求语言               |
 
-## 参数详细说明
-- **`timezone`**  
-  - 时区建议和ip所在地区的时区保持一致。
+---
 
+## 📝 参数详解
+### **`timezone`**  
+- **功能**：设置浏览器时区
+- **建议**：与代理 IP 所在地区时区保持一致
+- **示例**：`--timezone=America/New_York`
 
+### **`fpseed`**  
+- **功能**：指纹生成种子
+- **影响范围**：canvas, webgl, audio, speech, DOMRect, 字体等指纹
+- **重要性**：保持相同种子可确保生成一致的浏览器指纹
 
-- **`fpseed`**  
-  - 指纹的种子，用来固定生成的指纹，以便下次使用一致的指纹，会影响canvas,webgl,audio,speech,domrect,font等等指纹。
+### **`chrome-version`**  
+- **功能**：指定 Chrome 浏览器版本
+- **注意**：
+  - 版本号与浏览器 API 紧密相关，随意修改可能导致检测风险
+  - 自动适配 TLS 指纹（支持版本有限）
+  - 仅建议在目标网站有严格版本控制时使用
+- **推荐**：使用官方发布的 Chrome 版本号
 
+### **`noimage`**  
+- **功能**：禁用所有图片加载
+- **使用场景**：提高页面加载速度
+- **警告**：可能触发 Cloudflare 等安全检测（不推荐常规使用）
 
+### **`nocrash`**  
+- **功能**：修复 Playwright/Puppeteer 中 iframe 相关的崩溃问题
+- **修复问题**：`contentWindow.open` 导致的崩溃
 
-- **`chrome-version`**  
-  - 浏览器版本号，不建议随便添加，因为版本和许多api绑定，api没做修改，严格情况下会被检测出来，增加这个的目的为了应付一些不检测api但封控版本的网站。
-  - 注意，修改版本号会自动修改tls指纹，但由于我目前没有全部版本的chrome指纹，所有可能会存在问题。
-  - 如果需要添加版本号，建议用chrome发布的版本号，随便伪造可能存在问题。
+### **`lang` 与 `accept-lang`**
+- **功能**：控制浏览器语言和 HTTP 请求头
+- **影响**：语音识别(speech)、本地化相关指纹
+- **建议**：保持两者一致
 
+---
 
+## 🤖 自动化工具支持
+### 已消除的自动化特征
+- ✅ CDP 检测
+- ✅ Selenium 特征
+- ✅ Playwright 特征
+- ✅ DrissionPage 特征
 
-- **`noimage`**  
-  - 不加载图片，一般情况不建议加，比如cloudflare需要图片相关的请求才能绕过，开启后会被拦截。
+### 推荐工具
+**[DrissionPage](https://github.com/g1879/DrissionPage)** - 低特征、高性能的自动化解决方案  
+**优势**：
+- 极简的浏览器指纹特征
+- 完美的鼠标事件模拟
+- 无崩溃风险的内容交互
 
+### 关键技术改进
+1. **鼠标事件修复**：彻底解决 CDP 的 `Input.dispatchMouseEvent` 缺陷
+2. **Shadow DOM 访问**：通过 `opshadowRoot` 访问封闭式 shadow DOM
+3. **自动化检测绕过**：消除常见自动化工具特征标记
 
+---
 
-- **`nocrash`**  
-  - 解决playwright和puppeteer存在iframe的contentWindow.open导致崩溃的bug。
+## 🐞 调试支持
+- **重命名调试器**：`debugger` → `debugging`（绕过检测）
+- **控制台检查**：绕过常见的控制台属性检查
 
+---
 
-- **`lang`** 和 **`accept-lang`**
-  - 官方的参数，建议加上，会影响speech指纹 
-
-
-## 自动化工具的建议
-- 干掉了cdp检测，selenium，playwright，DrissionPage等自动化工具部分特征。
-
-
-- 建议使用[DrissionPage](https://github.com/g1879/DrissionPage),特征比较少。
-
-
-- 修复了cdp的鼠标事件bug，该bug影响所有使用Input.dispatchMouseEvent的自动化工具。
-
-
-- 用opshadowRoot代替了shadowRoot，可以无视closed状态获取数据。
-
-## 调试
-- 原本的debugger被修改为debugging
-
-
-- 过掉了console检查
-
-
-## 待续
-- 由于没有苹果开发者账号，所以没有签名，隐私与安全性里面的安全性下仍要打开才能运行。
-- 增加伪造gpu指纹
-- 增加更多chrome版本tls指纹
+## 🚧 开发路线图
+| 功能                     | 状态   | 说明                                                                 |
+|--------------------------|--------|----------------------------------------------------------------------|
+| Linux 支持               | ❌ 待实现 | 正在适配 Linux 平台                                                  |
+| macOS 签名               | ❌ 待解决 | 需苹果开发者账号解决隐私与安全性警告                                 |
+| GPU 指纹伪造             | ⚙️ 开发中 | 增强图形指纹的伪装能力                                               |
+| 多版本 TLS 指纹支持      | ⚙️ 开发中 | 增加更多 Chrome 版本的 TLS 指纹库                                    |
+> **提示**：项目持续更新中，欢迎提交 Issue！
