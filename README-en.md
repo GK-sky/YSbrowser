@@ -23,7 +23,7 @@
 ---
 
 ## ⚙️ Core Parameters
-| Parameter          | Default Value    | Description                 |
+| Parameter          | Value            | Description                 |
 |--------------------|------------------|-----------------------------|
 | `--timezone`       | `Asia/Tokyo`     | Set browser timezone        |
 | `--fpseed`         | `12lfisffwfaTYa` | Fingerprint generation seed |
