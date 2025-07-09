@@ -128,4 +128,4 @@
 | GPU Fingerprint Spoofing | ⚙️ In Progress | Enhancing graphics fingerprint camouflage                        |
 | Multi-version TLS Support| ⚙️ In Progress | Expanding TLS fingerprint library for more Chrome versions       |
 
-> **Tip**: Project continuously updated - welcome to submit Issues!
+> **Tip**: Project continuously updated - welcome to submit Issues! If you'd like to help me collect more fingerprints, please click [here](https://www.hanyiting.com)
