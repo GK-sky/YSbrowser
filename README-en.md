@@ -33,6 +33,8 @@
 | `--lang`           | `zh-CN`          | Set browser language        |
 | `--accept-lang`    | `zh-CN`          | Set HTTP request language   |
 | `--proxy-server`   | `-`              | Set proxy server            |
+| `--cpucores`        | `6`              | Number of CPU cores         |
+| `--platformversion` | `15.4.1`         | Operating system version    |
 
 ---
 
@@ -78,6 +80,16 @@
   - `socks5`: SOCKS5 proxy (authentication not supported)
 - **Examples**:
   - `--proxy-server=http://127.0.0.1:8080`
+
+### **`cpucores`**  
+- **Function**：Number of CPU cores (e.g., an i7 typically has 6 cores, corresponding to navigator.hardwareConcurrency).
+- **Recommendation**：Use common CPU core counts (6, 8, 10, 12).
+
+### **`platformversion`**  
+- **Function**：Operating system version.
+- **Recommendation**：
+  - `macOS`:  Use versions like 15.4.1, 15.5, etc.
+  - `Windows`: Use versions like 10.0.0, etc.
 
 ---
 
