@@ -130,4 +130,4 @@
 > **提示**：项目持续更新中，欢迎提交 Issue！如果想帮助我收集更多指纹，请点击[网址](https://www.hanyiting.com)
 
 ### 交流群
-<img src="qrcode_1753186101183.jpg" alt="Q群1043047569" width="400" height="400">
+<img src="QQ20250723-104659.png" alt="Q群1043047569" width="400" height="400">
