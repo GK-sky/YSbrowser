@@ -18,7 +18,7 @@
 | [datadome](https://datadome.co/products/bot-protection/)            | ✅ Perfect    | -                    |
 | [brotector](https://kaliiiiiiiiii.github.io/brotector/)             | ✅ Perfect    | -                    |
 | [sannysoft](https://bot.sannysoft.com/)                             | ✅ Perfect    | -                    |
-| [fingerprint](https://fingerprint.com/products/bot-detection/)      | ✅ Perfect    | -                    |
+| [fingerprint](https://fingerprint.com/products/bot-detection/)      | ❌ pending modification    | -                    |
 
 ---
 

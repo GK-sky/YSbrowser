@@ -8,17 +8,17 @@
 [English](README-en.md) | [中文](README.md)
 
 ## 🔍 检测通过列表
-| 检测平台                                                             | 状态         | 备注               |
-|---------------------------------------------------------------------|--------------|--------------------|
-| [browserscan](https://browserscan.net)                              | ✅ 完美通过     | -                  |
-| [creepjs](https://abrahamjuliot.github.io/creepjs/)                 | ✅ 62.5%+     | 持续优化中         |
-| [iphey](https://iphey.com)                                          | ✅ 完美通过     | -                  |
-| [pixelscan](https://pixelscan.net)                                  | ✅ 完美通过     | -                  |
-| [cloudflare](https://www.cloudflare.com/zh-cn/)                     | ✅ 完美通过     | 需启用图片加载     |
-| [datadome](https://datadome.co/products/bot-protection/)            | ✅ 完美通过     | -                  |
-| [brotector](https://kaliiiiiiiiii.github.io/brotector/)             | ✅ 完美通过     | -                  |
-| [sannysoft](https://bot.sannysoft.com/)                             | ✅ 完美通过     | -                  |
-| [fingerprint](https://fingerprint.com/products/bot-detection/)      | ✅ 完美通过     | -                  |
+| 检测平台                                                             | 状态       | 备注               |
+|---------------------------------------------------------------------|----------|--------------------|
+| [browserscan](https://browserscan.net)                              | ✅ 完美通过   | -                  |
+| [creepjs](https://abrahamjuliot.github.io/creepjs/)                 | ✅ 62.5%+ | 持续优化中         |
+| [iphey](https://iphey.com)                                          | ✅ 完美通过   | -                  |
+| [pixelscan](https://pixelscan.net)                                  | ✅ 完美通过   | -                  |
+| [cloudflare](https://www.cloudflare.com/zh-cn/)                     | ✅ 完美通过   | 需启用图片加载     |
+| [datadome](https://datadome.co/products/bot-protection/)            | ✅ 完美通过   | -                  |
+| [brotector](https://kaliiiiiiiiii.github.io/brotector/)             | ✅ 完美通过   | -                  |
+| [sannysoft](https://bot.sannysoft.com/)                             | ✅ 完美通过   | -                  |
+| [fingerprint](https://fingerprint.com/products/bot-detection/)      | ❌ 待修改    | -                  |
 
 ---
 
