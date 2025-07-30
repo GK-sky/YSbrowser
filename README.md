@@ -23,18 +23,19 @@
 ---
 
 ## ⚙️ 核心参数配置
-| 参数名                 | 值                | 功能描述         |
-|---------------------|------------------|--------------|
-| `--timezone`        | `Asia/Tokyo`     | 设置浏览器时区      |
-| `--fpseed`          | `12lfisffwfaTYa` | 指纹生成种子       |
-| `--chrome-version`  | `130.0.7151.70`  | Chrome 浏览器版本 |
-| `--noimage`         | -                | 禁用图片加载       |
-| `--nocrash`         | -                | 修复自动化工具崩溃问题  |
-| `--lang`            | `zh-CN`          | 设置浏览器语言      |
-| `--accept-lang`     | `zh-CN`          | 设置 HTTP 请求语言 |
-| `--proxy-server`    | `-`              | 设置代理服务器      |
-| `--cpucores`        | `6`              | cpu核心数       |
-| `--platformversion` | `15.4.1`         | 系统版本         |
+| 参数名                 | 值                   | 功能描述         |
+|---------------------|---------------------|--------------|
+| `--timezone`        | `Asia/Tokyo`        | 设置浏览器时区      |
+| `--fpseed`          | `12lfisffwfaTYa`    | 指纹生成种子       |
+| `--chrome-version`  | `130.0.7151.70`     | Chrome 浏览器版本 |
+| `--noimage`         | -                   | 禁用图片加载       |
+| `--nocrash`         | -                   | 修复自动化工具崩溃问题  |
+| `--lang`            | `zh-CN`             | 设置浏览器语言      |
+| `--accept-lang`     | `zh-CN`             | 设置 HTTP 请求语言 |
+| `--proxy-server`    | `socks5://ip:port`  | 设置代理服务器      |
+| `--proxy-auth`      | `username:password` | 设置代理认证       |
+| `--cpucores`        | `6`                 | cpu核心数       |
+| `--platformversion` | `15.4.1`            | 系统版本         |
 
 ---
 
@@ -80,6 +81,11 @@
   - `socks5`：SOCKS5 代理（暂不支持认证）
 - **示例**：
   - `--proxy-server=http://127.0.0.1:8080`
+
+### **`proxy-auth`**  
+- **功能**：设置网络代理认证
+- **示例**：
+  - `--proxy-auth=username:password`
 
 ### **`cpucores`**  
 - **功能**：cpu的核心数（比如i7是6核，对应navigator.hardwareConcurrency）

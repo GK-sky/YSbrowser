@@ -23,18 +23,19 @@
 ---
 
 ## ⚙️ Core Parameters
-| Parameter          | Value            | Description                 |
-|--------------------|------------------|-----------------------------|
-| `--timezone`       | `Asia/Tokyo`     | Set browser timezone        |
-| `--fpseed`         | `12lfisffwfaTYa` | Fingerprint generation seed |
-| `--chrome-version` | `130.0.7151.70`  | Chrome browser version      |
-| `--noimage`        | -                | Disable image loading       |
-| `--nocrash`        | -                | Fix automation tool crashes |
-| `--lang`           | `zh-CN`          | Set browser language        |
-| `--accept-lang`    | `zh-CN`          | Set HTTP request language   |
-| `--proxy-server`   | `-`              | Set proxy server            |
-| `--cpucores`        | `6`              | Number of CPU cores         |
-| `--platformversion` | `15.4.1`         | Operating system version    |
+| Parameter          | Value               | Description                 |
+|--------------------|---------------------|-----------------------------|
+| `--timezone`       | `Asia/Tokyo`        | Set browser timezone        |
+| `--fpseed`         | `12lfisffwfaTYa`    | Fingerprint generation seed |
+| `--chrome-version` | `130.0.7151.70`     | Chrome browser version      |
+| `--noimage`        | -                   | Disable image loading       |
+| `--nocrash`        | -                   | Fix automation tool crashes |
+| `--lang`           | `zh-CN`             | Set browser language        |
+| `--accept-lang`    | `zh-CN`             | Set HTTP request language   |
+| `--proxy-server`   | `socks5://ip:port`  | Set proxy server            |
+| `--proxy-auth`     | `username:password` | Set proxy auth              |
+| `--cpucores`       | `6`                 | Number of CPU cores         |
+| `--platformversion`| `15.4.1`            | Operating system version    |
 
 ---
 
@@ -80,6 +81,11 @@
   - `socks5`: SOCKS5 proxy (authentication not supported)
 - **Examples**:
   - `--proxy-server=http://127.0.0.1:8080`
+
+### **`proxy-auth`**  
+- **Function**：Set proxy authentication credentials
+- **Examples**：
+  - `--proxy-auth=username:password`
 
 ### **`cpucores`**  
 - **Function**：Number of CPU cores (e.g., an i7 typically has 6 cores, corresponding to navigator.hardwareConcurrency).
