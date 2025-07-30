@@ -78,7 +78,7 @@
 - **协议支持**：
   - `http`：HTTP/HTTPS 代理
   - `socks4`：SOCKS4 代理
-  - `socks5`：SOCKS5 代理（暂不支持认证）
+  - `socks5`：SOCKS5 代理
 - **示例**：
   - `--proxy-server=http://127.0.0.1:8080`
 

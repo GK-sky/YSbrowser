@@ -78,7 +78,7 @@
 - **Supported Protocols**:
   - `http`: HTTP/HTTPS proxy
   - `socks4`: SOCKS4 proxy
-  - `socks5`: SOCKS5 proxy (authentication not supported)
+  - `socks5`: SOCKS5 proxy
 - **Examples**:
   - `--proxy-server=http://127.0.0.1:8080`
 
