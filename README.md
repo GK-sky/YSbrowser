@@ -8,34 +8,38 @@
 [English](README-en.md) | [中文](README.md)
 
 ## 🔍 检测通过列表
-| 检测平台                                                             | 状态       | 备注               |
-|---------------------------------------------------------------------|----------|--------------------|
-| [browserscan](https://browserscan.net)                              | ✅ 完美通过   | -                  |
-| [creepjs](https://abrahamjuliot.github.io/creepjs/)                 | ✅ 62.5%+ | 持续优化中         |
-| [iphey](https://iphey.com)                                          | ✅ 完美通过   | -                  |
-| [pixelscan](https://pixelscan.net)                                  | ✅ 完美通过   | -                  |
-| [cloudflare](https://www.cloudflare.com/zh-cn/)                     | ✅ 完美通过   | 需启用图片加载     |
-| [datadome](https://datadome.co/products/bot-protection/)            | ✅ 完美通过   | -                  |
-| [brotector](https://kaliiiiiiiiii.github.io/brotector/)             | ✅ 完美通过   | -                  |
-| [sannysoft](https://bot.sannysoft.com/)                             | ✅ 完美通过   | -                  |
-| [fingerprint](https://fingerprint.com/products/bot-detection/)      | ✅ 完美通过       | -                  |
+| 检测平台                                                             | 状态            | 备注     |
+|--------------------------------------------------------------------|---------------|--------|
+| [browserscan](https://browserscan.net)                             | ✅ 完美通过        | -      |
+| [creepjs](https://abrahamjuliot.github.io/creepjs/)                | ✅ 62.5%+      | 持续优化中  |
+| [iphey](https://iphey.com)                                         | ✅ 完美通过        | -      |
+| [pixelscan](https://pixelscan.net)                                 | ✅ 完美通过        | -      |
+| [cloudflare](https://www.cloudflare.com/zh-cn/)                    | ✅ 完美通过        | 需启用图片加载 |
+| [datadome](https://datadome.co/products/bot-protection/)           | ✅ 完美通过        | -      |
+| [brotector](https://kaliiiiiiiiii.github.io/brotector/)            | ✅ 完美通过        | -      |
+| [sannysoft](https://bot.sannysoft.com/)                            | ✅ 完美通过        | -      |
+| [fingerprint](https://fingerprint.com/products/bot-detection/)     | ✅ 完美通过        | -      |
 
 ---
 
 ## ⚙️ 核心参数配置
-| 参数名                 | 值                   | 功能描述         |
-|---------------------|---------------------|--------------|
-| `--timezone`        | `Asia/Tokyo`        | 设置浏览器时区      |
-| `--fpseed`          | `12lfisffwfaTYa`    | 指纹生成种子       |
-| `--chrome-version`  | `130.0.7151.70`     | Chrome 浏览器版本 |
-| `--noimage`         | -                   | 禁用图片加载       |
-| `--nocrash`         | -                   | 修复自动化工具崩溃问题  |
-| `--lang`            | `zh-CN`             | 设置浏览器语言      |
-| `--accept-lang`     | `zh-CN`             | 设置 HTTP 请求语言 |
-| `--proxy-server`    | `socks5://ip:port`  | 设置代理服务器      |
-| `--proxy-auth`      | `username:password` | 设置代理认证       |
-| `--cpucores`        | `6`                 | cpu核心数       |
-| `--platformversion` | `15.4.1`            | 系统版本         |
+| 参数名                                  | 值                     | 功能描述         |
+|--------------------------------------|-----------------------|--------------|
+| `--timezone`                         | `Asia/Tokyo`          | 设置浏览器时区      |
+| `--fpseed`                           | `12lfisffwfaTYa`      | 指纹生成种子       |
+| `--chrome-version`                   | `130.0.7151.70`       | Chrome 浏览器版本 |
+| `--noimage`                          | -                     | 禁用图片加载       |
+| `--nocrash`                          | -                     | 修复自动化工具崩溃问题  |
+| `--lang`                             | `zh-CN`               | 设置浏览器语言      |
+| `--accept-lang`                      | `zh-CN`               | 设置 HTTP 请求语言 |
+| `--proxy-server`                     | `socks5://ip:port`    | 设置代理服务器      |
+| `--proxy-auth`                       | `username:password`   | 设置代理认证       |
+| `--cpucores`                         | `6`                   | cpu核心数       |
+| `--platformversion`                  | `15.4.1`              | 系统版本         |
+| `--custom-screen`                    | `1792x1120,1792x1039` | 屏幕宽高         |
+| `--force-device-scale-factor`        | `1`                   | 物理像素和css像素比值 |
+| `--custom-geolocation`               | `110,220`             | 设置纬度和经度      |
+| `--use-fake-device-for-media-stream` | -                     | 设置虚拟媒体设备     |
 
 ---
 
@@ -96,6 +100,27 @@
 - **建议**：
   - `macOS`：使用版本像15.4.1，15.5等
   - `Windows`：使用版本像10.0.0等
+
+### **`custom-screen`**  
+- **功能**：屏幕的宽高和可用宽高，对应javascript里的screen中width,height,availwidth,availheight。
+- **建议**：如果设置它，width和height是必须的，availwidth和availheight如果不知道怎么设置可不加，浏览器会自动更改，尽量使用真实的分辨率。
+- **示例**：
+  - `1792x1120,1792x1039`
+  - `1792x1120`
+
+### **`force-device-scale-factor`**  
+- **功能**：物理像素和css像素比值，也就是devicePixelRatio
+- **示例**：
+  - `1`
+  - `2`
+
+### **`custom-geolocation`** 
+- **功能**：设置经纬度（navigator.geolocation.getCurrentPosition）
+- **示例**：
+  - `110,220`(纬度,经度)
+
+### **`use-fake-device-for-media-stream`**
+- **功能**：伪造媒体设备（navigator.mediaDevices.enumerateDevices）
 
 ---
 

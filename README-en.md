@@ -23,19 +23,23 @@
 ---
 
 ## ⚙️ Core Parameters
-| Parameter          | Value               | Description                 |
-|--------------------|---------------------|-----------------------------|
-| `--timezone`       | `Asia/Tokyo`        | Set browser timezone        |
-| `--fpseed`         | `12lfisffwfaTYa`    | Fingerprint generation seed |
-| `--chrome-version` | `130.0.7151.70`     | Chrome browser version      |
-| `--noimage`        | -                   | Disable image loading       |
-| `--nocrash`        | -                   | Fix automation tool crashes |
-| `--lang`           | `zh-CN`             | Set browser language        |
-| `--accept-lang`    | `zh-CN`             | Set HTTP request language   |
-| `--proxy-server`   | `socks5://ip:port`  | Set proxy server            |
-| `--proxy-auth`     | `username:password` | Set proxy auth              |
-| `--cpucores`       | `6`                 | Number of CPU cores         |
-| `--platformversion`| `15.4.1`            | Operating system version    |
+| Parameter                            | Value                 | Description                                    |
+|--------------------------------------|-----------------------|------------------------------------------------|
+| `--timezone`                         | `Asia/Tokyo`          | Set browser timezone                           |
+| `--fpseed`                           | `12lfisffwfaTYa`      | Fingerprint generation seed                    |
+| `--chrome-version`                   | `130.0.7151.70`       | Chrome browser version                         |
+| `--noimage`                          | -                     | Disable image loading                          |
+| `--nocrash`                          | -                     | Fix automation tool crashes                    |
+| `--lang`                             | `zh-CN`               | Set browser language                           |
+| `--accept-lang`                      | `zh-CN`               | Set HTTP request language                      |
+| `--proxy-server`                     | `socks5://ip:port`    | Set proxy server                               |
+| `--proxy-auth`                       | `username:password`   | Set proxy auth                                 |
+| `--cpucores`                         | `6`                   | Number of CPU cores                            |
+| `--platformversion`                  | `15.4.1`              | Operating system version                       |
+| `--custom-screen`                    | `1792x1120,1792x1039` | Set screen width and height                    |
+| `--force-device-scale-factor`        | `1`                   | Set the ratio of physical pixels to CSS pixels |
+| `--custom-geolocation`               | `110,220`             | Set latitude and longitude                     |
+| `--use-fake-device-for-media-stream` | -                     | Use fake media devices                         |
 
 ---
 
@@ -96,6 +100,27 @@
 - **Recommendation**：
   - `macOS`:  Use versions like 15.4.1, 15.5, etc.
   - `Windows`: Use versions like 10.0.0, etc.
+
+### **`custom-screen`** 
+- **Function**: Sets screen width, height, and available width, height, corresponding to `screen.width`, `screen.height`, `screen.availWidth`, and `screen.availHeight` in JavaScript.
+- **Recommendation**: If you set this, `width` and `height` are required. `availWidth` and `availHeight` can be omitted, as the browser will adjust them automatically. It's recommended to use real-world resolutions.
+- **Example**:
+  - `1792x1120,1792x1039`
+  - `1792x1120`
+
+### **`force-device-scale-factor`** 
+- **Function**: Sets the ratio of physical pixels to CSS pixels, corresponding to `devicePixelRatio`.
+- **Example**:
+  - `1`
+  - `2`
+
+### **`custom-geolocation`** 
+- **Function**: Sets the latitude and longitude (`navigator.geolocation.getCurrentPosition`).
+- **Example**:
+  - `110,220` (latitude, longitude)
+
+### **`use-fake-device-for-media-stream`**
+- **Function**: Uses fake media devices (`navigator.mediaDevices.enumerateDevices`).
 
 ---
 
