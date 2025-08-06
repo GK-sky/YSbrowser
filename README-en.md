@@ -40,6 +40,8 @@
 | `--force-device-scale-factor`        | `1`                   | Set the ratio of physical pixels to CSS pixels |
 | `--custom-geolocation`               | `110,220`             | Set latitude and longitude                     |
 | `--use-fake-device-for-media-stream` | -                     | Use fake media devices                         |
+| `--custom-brand`                     | `"Microsoft Edge"`    | Browser brand                                  |
+| `--close-portscan`                   | -                     | Block port scan                                |
 
 ---
 
@@ -122,7 +124,20 @@
 ### **`use-fake-device-for-media-stream`**
 - **Function**: Uses fake media devices (`navigator.mediaDevices.enumerateDevices`).
 
----
+### **`custom-brand`**
+- **Function**: Disguises the browser brand.
+- **Recommendation**: If you are impersonating a real browser brand, you should include the `user-agent` parameter. If you are creating a fictional brand, you don't need to include `user-agent`.
+- **Examples**:
+  - `--custom-brand="Microsoft Edge" --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"`
+  - `--custom-brand="fake brand"`
+
+### **`close-portscan`**
+- **Function**: Blocks port scanning.
+
+## Basic Usage
+```bash
+chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx --cpucores=12 --platformversion=10.0.0 --custom-screen=1920x1080 --chrome-version=137.0.3296.93 --force-device-scale-factor=1 --custom-geolocation=110,220 --user-data-dir=./my_user_data --custom-brand="Microsoft Edge" --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0" --close-portscan
+```
 
 ## 🤖 Automation Tool Support
 ### Eliminated Automation Signatures

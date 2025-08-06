@@ -23,23 +23,25 @@
 ---
 
 ## ⚙️ 核心参数配置
-| 参数名                                  | 值                     | 功能描述         |
-|--------------------------------------|-----------------------|--------------|
-| `--timezone`                         | `Asia/Tokyo`          | 设置浏览器时区      |
-| `--fpseed`                           | `12lfisffwfaTYa`      | 指纹生成种子       |
-| `--chrome-version`                   | `130.0.7151.70`       | Chrome 浏览器版本 |
-| `--noimage`                          | -                     | 禁用图片加载       |
-| `--nocrash`                          | -                     | 修复自动化工具崩溃问题  |
-| `--lang`                             | `zh-CN`               | 设置浏览器语言      |
-| `--accept-lang`                      | `zh-CN`               | 设置 HTTP 请求语言 |
-| `--proxy-server`                     | `socks5://ip:port`    | 设置代理服务器      |
-| `--proxy-auth`                       | `username:password`   | 设置代理认证       |
-| `--cpucores`                         | `6`                   | cpu核心数       |
-| `--platformversion`                  | `15.4.1`              | 系统版本         |
+| 参数名                                  | 值                   | 功能描述         |
+|--------------------------------------|---------------------|--------------|
+| `--timezone`                         | `Asia/Tokyo`        | 设置浏览器时区      |
+| `--fpseed`                           | `12lfisffwfaTYa`    | 指纹生成种子       |
+| `--chrome-version`                   | `130.0.7151.70`     | Chrome 浏览器版本 |
+| `--noimage`                          | -                   | 禁用图片加载       |
+| `--nocrash`                          | -                   | 修复自动化工具崩溃问题  |
+| `--lang`                             | `zh-CN`             | 设置浏览器语言      |
+| `--accept-lang`                      | `zh-CN`             | 设置 HTTP 请求语言 |
+| `--proxy-server`                     | `socks5://ip:port`  | 设置代理服务器      |
+| `--proxy-auth`                       | `username:password` | 设置代理认证       |
+| `--cpucores`                         | `6`                 | cpu核心数       |
+| `--platformversion`                  | `15.4.1`            | 系统版本         |
 | `--custom-screen`                    | `1792x1120,1792x1039` | 屏幕宽高         |
-| `--force-device-scale-factor`        | `1`                   | 物理像素和css像素比值 |
-| `--custom-geolocation`               | `110,220`             | 设置纬度和经度      |
-| `--use-fake-device-for-media-stream` | -                     | 设置虚拟媒体设备     |
+| `--force-device-scale-factor`        | `1`                 | 物理像素和css像素比值 |
+| `--custom-geolocation`               | `110,220`           | 设置纬度和经度      |
+| `--use-fake-device-for-media-stream` | -                   | 设置虚拟媒体设备     |
+| `--custom-brand`                     | `"Microsoft Edge"`  | 浏览器品牌        |
+| `--close-portscan`                   | -                   | 屏蔽端口扫描       |
 
 ---
 
@@ -122,7 +124,23 @@
 ### **`use-fake-device-for-media-stream`**
 - **功能**：伪造媒体设备（navigator.mediaDevices.enumerateDevices）
 
+### **`custom-brand`**
+- **功能**：伪装浏览器品牌
+- **建议**：如果伪装成真实的浏览器品牌，请携带user-agent这个参数，如果虚构不存在的品牌就不用携带user-agent。
+- **示例**：
+  - `--custom-brand="Microsoft Edge"
+--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"`
+  - `--custom-brand="fake brand"`
+
+### **`close-portscan`**
+- **功能**：屏蔽端口扫描
+
 ---
+
+## 基本用法
+```bash
+chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx --cpucores=12 --platformversion=10.0.0 --custom-screen=1920x1080 --chrome-version=137.0.3296.93 --force-device-scale-factor=1 --custom-geolocation=110,220 --user-data-dir=./my_user_data --custom-brand="Microsoft Edge" --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0" --close-portscan
+```
 
 ## 🤖 自动化工具支持
 ### 已消除的自动化特征
