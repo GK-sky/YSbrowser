@@ -138,6 +138,7 @@
 ---
 
 ## 基本用法
+- **警告**：由于没签名，mac上要执行xattr -cr YSbrowser.app才能使用。
 ```bash
 chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx --cpucores=12 --platformversion=10.0.0 --custom-screen=1920x1080 --chrome-version=137.0.3296.93 --force-device-scale-factor=1 --custom-geolocation=110,220 --user-data-dir=./my_user_data --custom-brand="Microsoft Edge" --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0" --close-portscan
 ```
@@ -173,7 +174,6 @@ chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=12
 | 功能                     | 状态   | 说明                                                                 |
 |--------------------------|--------|----------------------------------------------------------------------|
 | Linux 支持               | ❌ 待实现 | 正在适配 Linux 平台                                                  |
-| macOS 签名               | ❌ 待解决 | 需苹果开发者账号解决隐私与安全性警告                                 |
 | GPU 指纹伪造             | ⚙️ 开发中 | 增强图形指纹的伪装能力                                               |
 | 多版本 TLS 指纹支持      | ⚙️ 开发中 | 增加更多 Chrome 版本的 TLS 指纹库                                    |
 > **提示**：项目持续更新中，欢迎提交 Issue！如果想帮助我收集更多指纹，请点击[网址](https://www.hanyiting.com)
