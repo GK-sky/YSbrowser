@@ -136,8 +136,14 @@
 
 ## Basic Usage
 - **Warning**: Due to the lack of a signature, you must run `xattr -cr YSbrowser.app` on macOS to use it.
+- **Warning**: The following are basic parameters. --user-data-dir is required to maintain environment isolation.
 ```bash
-chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx --cpucores=12 --platformversion=10.0.0 --custom-screen=1920x1080 --chrome-version=137.0.3296.93 --force-device-scale-factor=1 --custom-geolocation=110,220 --user-data-dir=./my_user_data --custom-brand="Microsoft Edge" --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0" --close-portscan
+chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx  --user-data-dir=./my_user_data 
+```
+
+## Simulate Brave
+```bash
+chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx --user-data-dir=./my_user_data --chrome-version=137.0.0.0 --custom-brand=Brave --enable-features=BraveAPI --disable-features=keyboardAPI
 ```
 
 ## 🤖 Automation Tool Support

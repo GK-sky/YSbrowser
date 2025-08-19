@@ -139,8 +139,14 @@
 
 ## 基本用法
 - **警告**：由于没签名，mac上要执行xattr -cr YSbrowser.app才能使用。
+- **警告**：下面是基本参数，保持环境隔离必须携带--user-data-dir。
 ```bash
-chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx --cpucores=12 --platformversion=10.0.0 --custom-screen=1920x1080 --chrome-version=137.0.3296.93 --force-device-scale-factor=1 --custom-geolocation=110,220 --user-data-dir=./my_user_data --custom-brand="Microsoft Edge" --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0" --close-portscan
+chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx  --user-data-dir=./my_user_data 
+```
+
+## 模拟brave
+```bash
+chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=121e0opwlltx  --user-data-dir=./my_user_data --chrome-version=137.0.0.0 --custom-brand=Brave --enable-features=BraveAPI --disable-features=keyboardAPI
 ```
 
 ## 🤖 自动化工具支持
