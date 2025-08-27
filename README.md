@@ -184,5 +184,7 @@ chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=12
 | 多版本 TLS 指纹支持      | ⚙️ 开发中 | 增加更多 Chrome 版本的 TLS 指纹库                                    |
 > **提示**：项目持续更新中，欢迎提交 Issue！如果想帮助我收集更多指纹，请点击[网址](https://www.hanyiting.com)
 
+## 求职：有合适的爬虫和反爬岗位欢迎内推
+
 ### 交流群
 <img src="QQ20250723-104659.png" alt="Q群1043047569" width="400" height="400">
