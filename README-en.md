@@ -42,6 +42,7 @@
 | `--use-fake-device-for-media-stream` | -                     | Use fake media devices                         |
 | `--custom-brand`                     | `"Microsoft Edge"`    | Browser brand                                  |
 | `--close-portscan`                   | -                     | Block port scan                                |
+| `--iconumber`                        | 1                     | browser number                                 |
 
 ---
 
