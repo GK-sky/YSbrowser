@@ -169,7 +169,7 @@ chrome --timezone=Asia/Hong_Kong --lang=zh-CN --accept-lang=zh-CN,en --fpseed=12
 ---
 
 ## 🐞 Debugging Support
-- **Renamed Debugger**: `debugger` → `debugging` (bypasses detection)
+- **Renamed Debugger**: `debugger` → `debuging` (bypasses detection)
 - **Console Checks**: Bypasses common console property checks
 
 ---
